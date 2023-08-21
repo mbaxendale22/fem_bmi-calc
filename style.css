@@ -191,6 +191,19 @@
     }
 }
 
+@layer form {
+    .input-group {
+        background-color: #345ff6;
+    }
+    .input-group p {
+        position: relative;
+        width: 1rem;
+        margin: 0;
+        top: -1.5rem;
+        right: -8rem;
+    }
+}
+
 @layer main {
     .result-actions {
         background-image: linear-gradient(var(--background-gradient));

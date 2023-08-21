@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <script defer src="./index.js"></script>
+    <script defer src="./index.js" type="module"></script>
 
-    <title>Frontend Mentor | Body Mass Index Calculator</title>
+    <title>Body Mass Index Calculator</title>
 </head>
 
 <body>
@@ -31,19 +31,26 @@
                     your overall health and well-being.</p>
             </div>
 
+
+
         </header>
+
         <main>
 
-            <section class="score-wrapper">
-                Enter your details below
+            <section class="form-wrapper inner-wrapper">
+                <form id="system-form">
+                    <h3>Enter your details below</h3>
+                    <input type="radio" id="metric" name="metric" value="metric" checked="checked" />
+                    <label for="metric">Metric</label>
+                    <input type="radio" id="imperial" name="metric" value="imperial" />
+                    <label for="imperial">Imperial</label>
+                </form>
+                <form id="calculation-form">
 
-                Metric
-                Imperial
 
-                Height
-                Weight
+                </form>
 
-                Your BMI is...
+
 
             </section>
 
