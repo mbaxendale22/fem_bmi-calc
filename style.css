@@ -184,7 +184,6 @@
         border-radius: 0 0 1rem 1rem;
         width: 100%;
         padding-bottom: 12rem;
-        /* z-index: -11; */
     }
 
     header svg {
@@ -194,16 +193,12 @@
 }
 
 @layer form {
-    main {
-    }
     .form-wrapper {
         border-radius: 1rem;
         box-shadow: var(--shadow-lg);
         background-color: var(--white);
         padding: 2rem;
         margin-top: -10rem;
-        /* z-index: 10; */
-        
     }
     #system-form label {
         color: var(--gunmetal);
@@ -252,6 +247,10 @@
         border-radius: 50%;
     }
 
+    .input-group {
+        position: relative;
+    }
+
     .input-group input {
         padding: 1rem;
         border-radius: 0.5rem;
@@ -264,11 +263,11 @@
         width: 100%;
     }
     .input-group p {
-        position: relative;
+        position: absolute;
         width: 1rem;
         margin: 0;
-        top: -2.75rem;
-        right: -21rem;
+        top: 1.5rem;
+        right: 2rem;
         color: var(--blue);
     }
 
@@ -279,16 +278,18 @@
         color: var(--dark-electric-blue);
     }
 
+
     .imperial-input-group {
         display: flex;
         gap: 1rem;
+        position: relative;
     }
     .imperial-input-group p {
-        position: relative;
+        position: absolute;
         width: 1rem;
         margin: 0;
-        top: -2.75rem;
-        right: -8.5rem;
+        top: 1.5rem;
+        right: 1.75rem;
         font-size: 24px;
         line-height: 110%;
         font-weight: 600;
@@ -315,6 +316,7 @@
         padding: 1rem 2rem;
         color: var(--white);
         cursor: pointer;
+        margin-top: 1rem;
     }
     .btn:hover {
         background-color: rgba(52, 95, 246, 0.3);
