@@ -209,6 +209,8 @@
         margin-top: 0;
     }
 
+    /************ RADIO BUTTONS  ***************/
+
     .radio-group {
         display: flex;
         justify-content: space-around;
@@ -247,8 +249,11 @@
         border-radius: 50%;
     }
 
+    /************ FORM INPUTS  ***************/
+
     .input-group {
         position: relative;
+        padding-bottom: 1rem;
     }
 
     .input-group input {
@@ -278,11 +283,11 @@
         color: var(--dark-electric-blue);
     }
 
-
     .imperial-input-group {
         display: flex;
         gap: 1rem;
         position: relative;
+        padding-bottom: 1rem;
     }
     .imperial-input-group p {
         position: absolute;
@@ -295,6 +300,8 @@
         font-weight: 600;
         color: var(--blue);
     }
+
+    /************ RESULTS  ***************/
 
     .bmi-results {
         background-color: var(--blue);
@@ -316,7 +323,6 @@
         padding: 1rem 2rem;
         color: var(--white);
         cursor: pointer;
-        margin-top: 1rem;
     }
     .btn:hover {
         background-color: rgba(52, 95, 246, 0.3);

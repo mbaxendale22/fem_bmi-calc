@@ -53,3 +53,20 @@ export function renderImperialForm() {
         <button type="submit" id="submit" class="btn btn-primary">Calculate</button>
     `
 }
+
+export function renderBMIResults(
+    container,
+    bmi,
+    bmiCategory,
+    idealWeightMin,
+    idealWeightMax,
+    unit
+) {
+    container.innerHTML = `
+    <p class="body-bold" id="bmi-heading">Your BMI is</p>
+    <h3 class="h2" id="bmi-result">${bmi}</h3>
+    <p class="body-sm" id="bmi-prognosis">
+    ${bmiCategory.message} with an ideal weight of <strong>${idealWeightMin}${unit} - ${idealWeightMax}${unit}</strong>
+    </p>
+`
+}

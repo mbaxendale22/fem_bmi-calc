@@ -1,9 +1,12 @@
-import { renderMetricForm, renderImperialForm } from './formRenderFunctions.js'
+import {
+    renderMetricForm,
+    renderImperialForm,
+    renderBMIResults,
+} from './formRenderFunctions.js'
 import {
     calculationMetricBMI,
     calculateImperialBMI,
 } from './BMICalcFunctions.js'
-const systemForm = document.querySelector('#system-form')
 const calculationForm = document.querySelector('#calculation-form')
 const metric = document.querySelector('#metric')
 const imperial = document.querySelector('#imperial')
@@ -28,23 +31,6 @@ imperial.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
     setSystem()
 })
-
-function renderBMIResults(
-    container,
-    bmi,
-    bmiCategory,
-    idealWeightMin,
-    idealWeightMax,
-    unit
-) {
-    container.innerHTML = `
-    <p class="body-bold" id="bmi-heading">Your BMI is</p>
-    <h3 class="h2" id="bmi-result">${bmi}</h3>
-    <p class="body-sm" id="bmi-prognosis">
-    ${bmiCategory.message} with an ideal weight of <strong>${idealWeightMin}${unit} - ${idealWeightMax}${unit}</strong>
-    </p>
-`
-}
 
 calculationForm.addEventListener('submit', (e) => {
     e.preventDefault()
