@@ -270,6 +270,22 @@
         color: var(--dark-electric-blue);
     }
 
+    .imperial-input-group {
+        display: flex;
+        gap: 1rem;
+    }
+    .imperial-input-group p {
+        position: relative;
+        width: 1rem;
+        margin: 0;
+        top: -2.75rem;
+        right: -9rem;
+        font-size: 24px;
+        line-height: 110%;
+        font-weight: 600;
+        color: var(--blue);
+    }
+
     .bmi-results {
         background-color: var(--blue);
         border-radius: 1rem;

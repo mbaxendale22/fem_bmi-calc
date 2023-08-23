@@ -26,24 +26,28 @@ export function renderImperialForm() {
     calculationForm.innerHTML = `
     <div class="form-group">
         <label for="height">Height</label>
-        <div class="input-group">
-            <input type="text" id="feet" name="feet" class="form-control" placeholder="0" />
-            <p>ft</p>
-        </div>
-        <div class="input-group">
-            <input type="text" id="inches" name="inches" class="form-control" placeholder="0" />
-            <p>in</p>
+        <div class="imperial-input-group">
+            <div class="input-group">
+                <input type="text" id="feet" name="feet" class="form-control" placeholder="0" />
+                <p>ft</p>
+            </div>
+            <div class="input-group">
+                <input type="text" id="inches" name="inches" class="form-control" placeholder="0" />
+                <p>in</p>
+            </div>
         </div>
     </div>
         <div class="form-group">
             <label for="weight">Weight (lbs)</label>
-            <div class='input-group'>
-                <input type="text" id="stone" name="stone" class="form-control" placeholder="0" />
-                <p>st</p>
-            </div>
-            <div class='input-group'>
+            <div class="imperial-input-group">
+                <div class='input-group'>
+                    <input type="text" id="stone" name="stone" class="form-control" placeholder="0" />
+                    <p>st</p>
+                </div>
+                <div class='input-group'>
                 <input type="text" id="pounds" name="pounds" class="form-control" placeholder="0" />
                 <p>lbs</p>
+                </div>
             </div>
         </div>
         <button type="submit" id="submit" class="btn btn-primary">Calculate</button>
