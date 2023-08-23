@@ -97,6 +97,7 @@
         margin: 0 auto;
         padding-left: 1rem;
         padding-right: 1rem;
+        border: 1px solid pink;
     }
 }
 
@@ -196,6 +197,7 @@
         /* border: 1px solid black; */
         border-radius: 1rem;
         box-shadow: var(--shadow-lg);
+        padding: 2rem;
     }
     #system-form label {
         color: var(--gunmetal);
@@ -209,17 +211,17 @@
     }
 
     .radio-control-group {
-        /* border: 1px solid black; */
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-bottom: 1rem;
     }
 
     .radio-control-group input {
         appearance: none;
         border: 1px solid var(--borders);
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
         border-radius: 50%;
         position: relative;
         display: flex;
@@ -236,8 +238,8 @@
     .radio-control-group input:checked::before {
         content: '';
         background-color: var(--blue);
-        width: 0.5rem;
-        height: 0.5rem;
+        width: 0.75rem;
+        height: 0.75rem;
         border-radius: 50%;
     }
 
@@ -250,13 +252,14 @@
         font-weight: 600;
         color: var(--gunmetal);
         margin-top: 0.5rem;
+        width: 100%;
     }
     .input-group p {
         position: relative;
         width: 1rem;
         margin: 0;
         top: -2.75rem;
-        right: -16rem;
+        right: -22rem;
         color: var(--blue);
     }
 
