@@ -200,6 +200,7 @@
     #system-form label {
         color: var(--gunmetal);
         font-weight: 600;
+        padding-left: 0.5rem;
     }
 
     .radio-group {
@@ -208,16 +209,42 @@
     }
 
     .radio-control-group {
-        border: 1px solid black;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    .input-group {
-        /* background-color: #345ff6; */
+
+    .radio-control-group input {
+        appearance: none;
+        border: 1px solid var(--borders);
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .radio-control-group input:checked {
+        background-color: rgba(52, 95, 246, 0.3);
+        border: none;
+    }
+    .radio-control-group input:checked::before {
+        content: '';
+        background-color: var(--blue);
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
     }
 
     .input-group input {
         padding: 1rem;
         border-radius: 0.5rem;
-        border: 1px solid #D8E2E7;
+        border: 1px solid #d8e2e7;
         font-size: 24px;
         line-height: 110%;
         font-weight: 600;
@@ -238,7 +265,6 @@
         line-height: 150%;
         font-weight: 400;
         color: var(--dark-electric-blue);
-
     }
 
     .bmi-results {
@@ -250,7 +276,6 @@
         color: var(--white);
     }
 }
-
 
 @layer main {
     .result-actions {
