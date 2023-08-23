@@ -97,7 +97,6 @@
         margin: 0 auto;
         padding-left: 1rem;
         padding-right: 1rem;
-        border: 1px solid pink;
     }
 }
 
@@ -184,6 +183,8 @@
         background-image: linear-gradient(var(--background-gradient));
         border-radius: 0 0 1rem 1rem;
         width: 100%;
+        padding-bottom: 12rem;
+        /* z-index: -11; */
     }
 
     header svg {
@@ -193,16 +194,24 @@
 }
 
 @layer form {
+    main {
+    }
     .form-wrapper {
-        /* border: 1px solid black; */
         border-radius: 1rem;
         box-shadow: var(--shadow-lg);
+        background-color: var(--white);
         padding: 2rem;
+        margin-top: -10rem;
+        /* z-index: 10; */
+        
     }
     #system-form label {
         color: var(--gunmetal);
         font-weight: 600;
         padding-left: 0.5rem;
+    }
+    #system-form h3 {
+        margin-top: 0;
     }
 
     .radio-group {
@@ -259,7 +268,7 @@
         width: 1rem;
         margin: 0;
         top: -2.75rem;
-        right: -22rem;
+        right: -21rem;
         color: var(--blue);
     }
 
@@ -279,7 +288,7 @@
         width: 1rem;
         margin: 0;
         top: -2.75rem;
-        right: -9rem;
+        right: -8.5rem;
         font-size: 24px;
         line-height: 110%;
         font-weight: 600;
@@ -290,9 +299,25 @@
         background-color: var(--blue);
         border-radius: 1rem;
         padding: 2rem;
+        margin-top: 1rem;
     }
-    .bmi-results :is(p, h3) {
+    .bmi-results p {
         color: var(--white);
+    }
+    .bmi-results h3 {
+        margin: 0;
+        color: var(--white);
+    }
+    .btn {
+        background: var(--blue);
+        border-radius: 0.5rem;
+        border: none;
+        padding: 1rem 2rem;
+        color: var(--white);
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: rgba(52, 95, 246, 0.3);
     }
 }
 

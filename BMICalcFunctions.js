@@ -30,7 +30,7 @@ const bmiCategories = [
 ]
 
 export function calculationMetricBMI(height, weight) {
-    let bmi = (weight / ((height / 100) * (height / 100))).toFixed(2)
+    let bmi = (weight / ((height / 100) * (height / 100))).toFixed(1)
 
     const idealWeightMin = ((height / 100) * (height / 100) * 18.5).toFixed(1)
     const idealWeightMax = ((height / 100) * (height / 100) * 25).toFixed(1)
@@ -49,7 +49,7 @@ export function calculationMetricBMI(height, weight) {
 export function calculateImperialBMI(feet, inches, stone, pounds) {
     let height = (feet * 12 + parseInt(inches)) * 0.0254
     let weight = (stone * 14 + parseInt(pounds)) * 0.453592
-    let bmi = (weight / (height * height)).toFixed(2)
+    let bmi = (weight / (height * height)).toFixed(1)
 
     const totalInches = feet * 12 + parseInt(inches)
 

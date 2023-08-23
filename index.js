@@ -7,6 +7,7 @@ const systemForm = document.querySelector('#system-form')
 const calculationForm = document.querySelector('#calculation-form')
 const metric = document.querySelector('#metric')
 const imperial = document.querySelector('#imperial')
+const bmiResults = document.querySelector('#bmi-results')
 
 function setSystem() {
     if (metric.checked) {
@@ -28,6 +29,23 @@ window.addEventListener('DOMContentLoaded', () => {
     setSystem()
 })
 
+function renderBMIResults(
+    container,
+    bmi,
+    bmiCategory,
+    idealWeightMin,
+    idealWeightMax,
+    unit
+) {
+    container.innerHTML = `
+    <p class="body-bold" id="bmi-heading">Your BMI is</p>
+    <h3 class="h2" id="bmi-result">${bmi}</h3>
+    <p class="body-sm" id="bmi-prognosis">
+    ${bmiCategory.message} with an ideal weight of <strong>${idealWeightMin}${unit} - ${idealWeightMax}${unit}</strong>
+    </p>
+`
+}
+
 calculationForm.addEventListener('submit', (e) => {
     e.preventDefault()
     if (metric.checked) {
@@ -35,6 +53,14 @@ calculationForm.addEventListener('submit', (e) => {
         let weight = e.target.weight.value
         const { bmi, bmiCategory, idealWeightMin, idealWeightMax } =
             calculationMetricBMI(height, weight)
+        renderBMIResults(
+            bmiResults,
+            bmi,
+            bmiCategory,
+            idealWeightMin,
+            idealWeightMax,
+            'kg'
+        )
     } else if (imperial.checked) {
         let feet = e.target.feet.value
         let inches = e.target.inches.value
@@ -47,6 +73,13 @@ calculationForm.addEventListener('submit', (e) => {
             stone,
             pounds
         )
+        renderBMIResults(
+            bmiResults,
+            bmi,
+            bmiCategory,
+            minWeight,
+            maxWeight,
+            'lbs'
+        )
     }
 })
-

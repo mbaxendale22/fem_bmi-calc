@@ -7,14 +7,14 @@ export function renderMetricForm() {
     <div class="form-group">
         <label for="height">Height</label>
         <div class="input-group">
-            <input type="text" id="height" name="height" class="form-control" placeholder="0" />
+            <input type="text" id="height" name="height" class="form-control" placeholder="0" required minlength="2" maxlength="3" />
             <p class="h3">cm</p>
         </div>
     </div>
         <div class="form-group">
             <label for="weight">Weight</label>
             <div class="input-group">
-                <input type="text" id="weight" name="weight" class="form-control" placeholder="0" />
+                <input type="text" id="weight" name="weight" class="form-control" placeholder="0" required maxlength="3" />
                 <p class="h3">kg</p>
             </div>
         </div>
