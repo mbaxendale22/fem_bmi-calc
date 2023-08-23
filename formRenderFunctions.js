@@ -8,14 +8,14 @@ export function renderMetricForm() {
         <label for="height">Height</label>
         <div class="input-group">
             <input type="text" id="height" name="height" class="form-control" placeholder="0" />
-            <p>cm</p>
+            <p class="h3">cm</p>
         </div>
     </div>
         <div class="form-group">
             <label for="weight">Weight</label>
             <div class="input-group">
                 <input type="text" id="weight" name="weight" class="form-control" placeholder="0" />
-                <p>kg</p>
+                <p class="h3">kg</p>
             </div>
         </div>
         <button type="submit" id="submit" class="btn btn-primary">Calculate</button>

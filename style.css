@@ -192,17 +192,65 @@
 }
 
 @layer form {
+    .form-wrapper {
+        /* border: 1px solid black; */
+        border-radius: 1rem;
+        box-shadow: var(--shadow-lg);
+    }
+    #system-form label {
+        color: var(--gunmetal);
+        font-weight: 600;
+    }
+
+    .radio-group {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .radio-control-group {
+        border: 1px solid black;
+    }
     .input-group {
-        background-color: #345ff6;
+        /* background-color: #345ff6; */
+    }
+
+    .input-group input {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #D8E2E7;
+        font-size: 24px;
+        line-height: 110%;
+        font-weight: 600;
+        color: var(--gunmetal);
+        margin-top: 0.5rem;
     }
     .input-group p {
         position: relative;
         width: 1rem;
         margin: 0;
-        top: -1.5rem;
-        right: -8rem;
+        top: -2.75rem;
+        right: -16rem;
+        color: var(--blue);
+    }
+
+    .form-group label {
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 400;
+        color: var(--dark-electric-blue);
+
+    }
+
+    .bmi-results {
+        background-color: var(--blue);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+    .bmi-results :is(p, h3) {
+        color: var(--white);
     }
 }
+
 
 @layer main {
     .result-actions {
