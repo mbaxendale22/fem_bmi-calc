@@ -27,7 +27,7 @@ export function renderMetricForm() {
 export function renderImperialForm() {
     calculationForm.innerHTML = `
     <div class="form-group">
-        <label for="height">Height</label>
+        <label for="feet">Height</label>
         <div class="imperial-input-group">
             <div class="input-group">
                 <input type="text" id="feet" name="feet" class="form-control" placeholder="0" />
@@ -40,7 +40,7 @@ export function renderImperialForm() {
         </div>
     </div>
         <div class="form-group">
-            <label for="weight">Weight (lbs)</label>
+            <label for="stone">Weight (lbs)</label>
             <div class="imperial-input-group">
                 <div class='input-group'>
                     <input type="text" id="stone" name="stone" class="form-control" placeholder="0" />
