@@ -4,6 +4,7 @@ const calculationForm = document.querySelector('#calculation-form')
 
 export function renderMetricForm() {
     calculationForm.innerHTML = `
+    <div class="metric-input-wrapper">
     <div class="form-group">
         <label for="height">Height</label>
         <div class="input-group">
@@ -18,6 +19,7 @@ export function renderMetricForm() {
                 <p class="h3">kg</p>
             </div>
         </div>
+    </div>
         <button type="submit" id="submit" class="btn btn-primary">Calculate</button>
     `
 }
@@ -63,10 +65,14 @@ export function renderBMIResults(
     unit
 ) {
     container.innerHTML = `
-    <p class="body-bold" id="bmi-heading">Your BMI is</p>
-    <h3 class="h2" id="bmi-result">${bmi}</h3>
-    <p class="body-sm" id="bmi-prognosis">
-    ${bmiCategory.message} with an ideal weight of <strong>${idealWeightMin}${unit} - ${idealWeightMax}${unit}</strong>
-    </p>
+    <div class="bmi-score">
+        <p class="body-bold" id="bmi-heading">Your BMI is</p>
+        <h2 id="bmi-result">${bmi}</h2>
+    </div>
+    <div class="bmi-message">
+        <p class="body-sm" id="bmi-prognosis">
+        ${bmiCategory.message} with an ideal weight of <strong>${idealWeightMin}${unit} - ${idealWeightMax}${unit}</strong>
+        </p>
+    </div>
 `
 }
